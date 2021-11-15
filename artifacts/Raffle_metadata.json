@@ -1,0 +1,516 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_vrfCoordinator",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_linkToken",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_keyHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_chainlinkFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_entranceFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_interval",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "player",
+						"type": "address"
+					}
+				],
+				"name": "enteredRaffle",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "requestId",
+						"type": "bytes32"
+					}
+				],
+				"name": "requestedRaffleWinner",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "player",
+						"type": "address"
+					}
+				],
+				"name": "winnerPicked",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "checkUpkeep",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "upkeepNeeded",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enterRaffle",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "onERC721Received",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "performUpkeep",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "requestId",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "randomness",
+						"type": "uint256"
+					}
+				],
+				"name": "rawFulfillRandomness",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_chainlinkFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_entranceFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_interval",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_keyHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_lastTimeStamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "s_players",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_raffleState",
+				"outputs": [
+					{
+						"internalType": "enum Raffle.raffleState",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_recentWinner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"checkUpkeep(bytes)": {
+					"details": "This is the function that the Chainlink Keeper nodes call they look for `upkeepNeeded` to return True the following should be true for this to return true: 1. The time interval has passed between raffle runs 2. The contract has LINK 3. The contract has ETH"
+				},
+				"onERC721Received(address,address,uint256,bytes)": {
+					"details": "See {IERC721Receiver-onERC721Received}. Always returns `IERC721Receiver.onERC721Received.selector`."
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"performUpkeep(bytes)": {
+					"details": "Once `checkUpkeep` is returning `true`, this function is called and it kicks off a Chainlink VRF call to get a random winner"
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"NFT_raffle.sol": "Raffle"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/VRFConsumerBase.sol": {
+			"keccak256": "0x991e49ee47043d6667887d7ed6ab5a0f8e4e5550f92b09b0d75c1fb1a473cd8d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a688c48fa681a7958d5cbb4e1845290ae317e2dfa1a059faae44c69d83409414",
+				"dweb:/ipfs/Qmb5Gpjya5VJ9LnwkEBfMr5DtDH462VBjXcA6uAU2f1Vj9"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/VRFRequestIDBase.sol": {
+			"keccak256": "0x7c8dad07e6c6c9269d97fd1191ccf9c0f0068683f1f88003e688eef9373de0d9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1d88c83a359c70f6b2e2e05d8f7611cce4a3d316a65e5175e14bcf9a6ced98af",
+				"dweb:/ipfs/QmeH3BEuVvaaQsz7sN5myEnFLoabTG4j85vS9Z6rfJkads"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol": {
+			"keccak256": "0xd2d73117e394024c56c712e4b73fc91b5d4ae2ede33752d237df4d0361851feb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc6c9da5c956fbe717f8933d8611dfe7ea289329e77ab66fab6c00f426741357",
+				"dweb:/ipfs/QmUmcKmaSGqbR5R5fYr47T363c8zTpg7X42Q72u42vJohB"
+			]
+		},
+		"@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol": {
+			"keccak256": "0x50528c237386c55ff122d047f91b32be7abe24e9dfdc609de21cd605aae83b9a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://92037bd13b34432f9377cb205c0039bd0724af66ea605598db31d4ccd33f879f",
+				"dweb:/ipfs/QmdH6Ef5PZgcPrJuWboLX5MhmezzTFniZCwJ6fk2tYVua4"
+			]
+		},
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2ebbbe6d0011175bd9e7268b83de3f9c2f9d8d4cbfbaef12aff977d7d727163",
+				"dweb:/ipfs/Qmd5c7Vxtis9wzkDNhxwc6A2QT5H9xn9kfjhx7qx44vpro"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xf101e8720213560fab41104d53b3cc7ba0456ef3a98455aa7f022391783144a0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e7820bcf567e6892d937c3cb10db263a4042e446799bca602535868d822384e",
+				"dweb:/ipfs/QmPG2oeDjKncqsEeyYGjAN7CwAJmMgHterXGGnpzhha4z7"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+			"keccak256": "0xd9517254724276e2e8de3769183c1f738f445f0095c26fd9b86d3c6687e887b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e604bcdcd5e5b2fb299ad09769cde6db19d5aa1929d1b5e939234a0f10d7eb8",
+				"dweb:/ipfs/Qmd8hXE3GZfBHuWx3RNiYgFW2ci7KvHtib8DiwzJ2dgo9V"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol": {
+			"keccak256": "0x8756c97d6004b1ae21517a013bdec72fbf30be7852afb2f395871d280131b250",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5039c7a002cd1f4854fedf70b3d0e7a03d1ab0b51d957334beb55e50f7107e8f",
+				"dweb:/ipfs/QmRGUdXyAqzo1hh2TKx23MgXzeS9fCkEf3Gp6WwGkJu51s"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://26e8b38a7ac8e7b4463af00cf7fff1bf48ae9875765bf4f7751e100124d0bc8c",
+				"dweb:/ipfs/QmWcsmkVr24xmmjfnBQZoemFniXjj3vwT78Cz6uqZW1Hux"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0x5718c5df9bd67ac68a796961df938821bb5dc0cd4c6118d77e9145afb187409b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d10e1d9b26042424789246603906ad06143bf9a928f4e99de8b5e3bdc662f549",
+				"dweb:/ipfs/Qmejonoaj5MLekPus229rJQHcC6E9dz2xorjHJR84fMfmn"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0xa28007762d9da9db878dd421960c8cb9a10471f47ab5c1b3309bfe48e9e79ff4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://796ab6e88af7bf0e78def0f059310c903af6a312b565344e0ff524a0f26e81c6",
+				"dweb:/ipfs/QmcsVgLgzWdor3UnAztUkXKNGcysm1MPneWksF72AvnwBx"
+			]
+		},
+		"NFT_raffle.sol": {
+			"keccak256": "0xcb2cb247344543ec4feecf1c2483e0fb716d280de2acde9c841861b957a0eba3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://02a0a40cfb812dd707e60d331887f4d60de5f3eb2ce2de2a1bf207542b80846b",
+				"dweb:/ipfs/QmcoGucU5g62JUi4hoASsdtEJH4HFXxoafHjEUpGaX3AKK"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763",
+				"dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N"
+			]
+		}
+	},
+	"version": 1
+}

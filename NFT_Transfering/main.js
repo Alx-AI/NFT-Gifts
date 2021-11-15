@@ -51,10 +51,11 @@ fixURL = (url) => {
 
 getTransferNFTs = async () => {
     let _chain = document.querySelector('#nft-chain2').value;
+    let _wallet = document.querySelector('#wallet-address').value;
     if (_chain == "empty") {
         alert("Choose a chain");
     } else {
-        await Moralis.Web3API.account.getNFTs({ chain: _chain })
+        await Moralis.Web3API.account.getNFTs({ chain: _chain, address: _wallet })
             .then((nfts) => getNFTs2(nfts));
     }
 }
