@@ -1,5 +1,5 @@
-Moralis.initialize("Z9AQergavoWdoB66MoLzrGz4r2lp7oNpeRRMlXbL");
-Moralis.serverURL = "https://bt39k4wwegjh.usemoralis.com:2053/server";
+Moralis.initialize("0Ng076V7yMSiLGhHgw6FgvlaNWRuewWm6YCXyS3P");
+Moralis.serverURL = "https://pk65khkm1imw.usemoralis.com:2053/server";
 
 // let subdirectory = "/wallet-1/";
 let subdirectory = "/";
